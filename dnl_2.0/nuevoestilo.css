@@ -1,0 +1,44 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.contenido{
+color: azure;
+width: 1200px;
+background-color: rgb(82, 136, 109);
+margin: 0 auto;
+}
+header{
+    background-color: rgb(24, 65, 44);
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    color: azure;
+}
+h1{
+    color: azure;
+}
+article{
+    box-shadow: 0 0 15PX 0 rgb(183, 218, 180);
+    padding: 5px;
+    border-radius: 10px;
+    width: 49%;
+}
+article h1{
+    background-color: rgb(50, 109, 53);
+    color: aliceblue;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10PX 10PX 0 0;
+}
+section{
+    display: flex;
+    padding: 20px;
+    column-gap: 2%;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}

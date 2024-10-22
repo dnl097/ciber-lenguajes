@@ -1,0 +1,19 @@
+.nombre{
+    color: red;
+    color: greenyellow;
+    color: aliceblue;
+    color: black;
+    color: orange;
+    color: gray;
+}
+
+.coloresRGB{
+    color: rgb(red, green, blue)
+}
+.coloreshexadecimales{
+    color: #123456;
+    color: #f00;
+    color: #fff;
+    color: #000;
+    color: #888;
+}

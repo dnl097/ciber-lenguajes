@@ -1,0 +1,28 @@
+body {
+    background-color: rgba(0, 0, 0, 0.842);
+
+}
+img{
+    width: 100%;
+}
+@media (min-width: 576px) {
+
+    body {
+        background: greenyellow;
+    }
+
+}
+
+@media (min-width: 992px) {
+    body{
+        background: lightseagreen;
+    }
+    img{
+        width: 49%;
+    }
+    h1{
+        color: aliceblue;
+        text-align: center;
+    }
+    
+}

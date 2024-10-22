@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Fútbol</title>
+    <link rel="stylesheet" href="estilofutbol.css">
+</head>
+<body>
+    <header>
+        <h1>Fútbol Mundial</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#jugadores">Jugadores</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Bienvenido al sitio de Fútbol</h2>
+        <p>Descubre todo sobre los mejores jugadores de fútbol y mira nuestra galería de imágenes destacadas.</p>
+    </section>
+
+    <section id="jugadores">
+        <h2>Jugadores Destacados</h2>
+        <ul>
+            <li><a href="#">Lionel Messi</a></li>
+            <li><a href="#">Cristiano Ronaldo</a></li>
+            <li><a href="#">Neymar Jr.</a></li>
+            <li><a href="#">Kylian Mbappé</a></li>
+        </ul>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería de Futbolistas</h2>
+        <div class="galeria">
+            <img src="images/messi1.jpg" alt="Lionel Messi">
+            <img src="images/ronaldo1.jpg" alt="Cristiano Ronaldo">
+            <img src="images/neymar1.jpg" alt="Neymar Jr.">
+            <img src="images/mbappe1.jpg" alt="Kylian Mbappé">
+        </div>
+    </section>
+    <section id="carrusel">
+        <h2>Carrusel de Jugadores</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="img/messi.jpg" alt="Lionel Messi">
+                <img src="img/ronaldo.jpg" alt="Cristiano Ronaldo">
+                <img src="img/neymar.jpg" alt="Neymar Jr.">
+                <img src="img/mbappe.jpg" alt="Kylian Mbappé">
+            </div>
+            <button class="prev-btn">&#10094;</button>
+            <button class="next-btn">&#10095;</button>
+        </div>
+    </section>
+    <script>
+        let currentIndex = 0;
+    
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+    
+        document.querySelector('.next-btn').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        });
+    
+        document.querySelector('.prev-btn').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+        });
+    
+        function updateCarousel() {
+            const carousel = document.querySelector('.carousel');
+            const newTransformValue = -currentIndex * 100;
+            carousel.style.transform = `translateX(${newTransformValue}%)`;
+        }
+    </script>
+    
+
+    <footer id="contacto">
+        <h2>Contacto</h2>
+        <p>Para más información, escríbenos a <a href="mailto:futbol@ejemplo.com">futbol@ejemplo.com</a></p>
+    </footer>
+</body>
+</html>
